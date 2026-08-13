@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#49bfff"><title>EX™ ARABIA STRIKE — أريبيا سترايك</title>
+<meta name="description" content="ARABIA STRIKE — original EX™ browser run-and-gun arcade action.">
+<meta property="og:title" content="EX™ ARABIA STRIKE"><meta property="og:image" content="./assets/cover.png">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="stylesheet" href="./style.css">
+</head><body><main id="app">
+<canvas id="game" width="304" height="224" aria-label="ARABIA STRIKE playable canvas"></canvas>
+<section id="menu" class="screen menu-screen">
+  <img class="cover" src="./assets/cover.png" alt="ARABIA STRIKE — أريبيا سترايك">
+  <div class="menu-gradient"></div>
+  <div class="brand-chip">フサム | experience™ · EXPERIENCE 004</div>
+  <div class="menu-actions"><button id="play1" class="cta">PLAY NOW <b>ابدأ الآن</b></button><button id="play2" class="sub">2P LOCAL CO‑OP</button></div>
+  <button id="settingsBtn" class="icon-btn">⚙</button>
+</section>
+<section id="brief" class="screen hidden"><div class="brief-card"><small>MISSION 001 // RED COAST</small><h1>THE COAST IS UNDER SIEGE.</h1><p>اكسر الحصار، أنقذ المدنيين، استولِ على EX‑HMV، وافتح الطريق إلى البلدة القديمة.</p><button id="deploy" class="cta">DEPLOY // انطلق</button></div></section>
+<div id="hud" class="hidden"><div class="hudLeft"><b id="score">000000</b><span id="lives">●●●</span></div><div class="hudWeapon"><span id="weapon">PULSE MG</span><b id="ammo">∞</b><small id="grenades">G×5</small></div></div>
+<div id="bossHud" class="hidden"><span>DUNE HARVESTER</span><i><b id="bossBar"></b></i></div>
+<div id="missionToast"></div>
+<div id="mobile" class="hidden"><div class="stick"><button data-k="left">◀</button><button data-k="right">▶</button></div><div class="actions"><button data-k="jump">↥</button><button data-k="grenade">✹</button><button data-k="shoot" class="fire">FIRE</button><button data-k="interact">E</button></div></div>
+<div id="crt" class="crt"></div>
+<section id="gameover" class="screen hidden"><div class="brief-card compact"><small>SIGNAL LOST</small><h1>CONTINUE?</h1><button id="retry" class="cta">REDEPLOY</button></div></section>
+<section id="win" class="screen hidden"><div class="brief-card compact"><small>MISSION COMPLETE</small><h1>THE COAST IS OPEN.</h1><p>تم فتح AL‑BALAD NIGHT DISTRICT.</p><button id="again" class="cta">PLAY AGAIN</button></div></section>
+<div id="settings" class="panel hidden"><button id="closeSettings">×</button><h2>DISPLAY</h2><label><input id="crtToggle" type="checkbox" checked> CRT warmth</label><label><input id="slowToggle" type="checkbox" checked> Arcade slowdown</label><label><input id="shakeToggle" type="checkbox" checked> Screen shake</label></div>
+</main><script src="./game.js"></script></body></html>
