@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#071019">
+<meta name="description" content="EX™ ARABIA STRIKE — original browser run-and-gun production MVP.">
+<title>EX™ ARABIA STRIKE — RUN • GUN • SURVIVE</title>
+<link rel="stylesheet" href="./style.css">
+<link rel="manifest" href="./manifest.webmanifest">
+</head>
+<body>
+<main id="app">
+  <canvas id="game" width="304" height="224" aria-label="EX Arabia Strike playable canvas"></canvas>
+
+  <section id="menu" class="screen menu">
+    <img class="cover" src="./assets/cover-main.webp" alt="ARABIA STRIKE">
+    <div class="coverShade"></div>
+    <div class="topBrand">フサム | experience™ <span>EX™ PLAYABLE WORLDS</span></div>
+    <div class="menuBottom">
+      <div class="status">MVP / PRODUCTION 01</div>
+      <div class="buttons">
+        <button id="play1" class="primary">PLAY NOW <b>ابدأ الآن</b></button>
+        <button id="play2">2P LOCAL CO-OP</button>
+        <button id="howBtn">HOW TO PLAY</button>
+      </div>
+      <p>Original EX™ run-and-gun arcade world • Pixel-perfect • 59.18Hz simulation</p>
+    </div>
+  </section>
+
+  <section id="brief" class="screen hidden overlay">
+    <div class="missionCard">
+      <small>MISSION 001 // RED COAST</small>
+      <h1>HOLD THE COAST.</h1>
+      <p>عصابة مدججة بالأسلحة تحاول كسر دفاعات الساحل. حرّر المدنيين، فعّل EX‑HMV، دمّر المدفعية، وامنع وحدة SAND COLOSSUS من الوصول للمدينة.</p>
+      <div class="chips"><span>RESCUE</span><span>DESTROY</span><span>VEHICLE</span><span>BOSS</span></div>
+      <button id="deploy" class="primary">DEPLOY // انطلق</button>
+    </div>
+  </section>
+
+  <section id="how" class="screen hidden overlay">
+    <div class="missionCard">
+      <small>CONTROL BRIEF</small><h2>التحكم</h2>
+      <div class="controls">
+        <div><b>A / D</b><span>MOVE</span></div><div><b>W / SPACE</b><span>JUMP</span></div>
+        <div><b>J / F</b><span>FIRE</span></div><div><b>K</b><span>GRENADE</span></div>
+        <div><b>E</b><span>INTERACT</span></div><div><b>P</b><span>PAUSE</span></div>
+      </div>
+      <button id="closeHow" class="primary">READY</button>
+    </div>
+  </section>
+
+  <div id="hud" class="hud hidden" dir="ltr">
+    <div class="hudBlock"><b id="score">000000</b><span id="lives">●●●</span></div>
+    <div class="objective"><span id="objective">REACH THE COAST</span><i><b id="progress"></b></i></div>
+    <div class="hudBlock"><span id="weapon">PULSE MG</span><b id="ammo">∞</b><small id="grenades">G×5</small></div>
+  </div>
+  <div id="bossHud" class="boss hidden"><span>SAND COLOSSUS</span><i><b id="bossBar"></b></i></div>
+  <div id="toast"></div>
+  <div id="crt" class="crt"></div>
+
+  <div id="mobile" class="mobile hidden" dir="ltr">
+    <div><button data-k="left">◀</button><button data-k="right">▶</button></div>
+    <div><button data-k="jump">JUMP</button><button data-k="grenade">✹</button><button data-k="shoot" class="fire">FIRE</button><button data-k="interact">E</button></div>
+  </div>
+
+  <section id="gameover" class="screen hidden overlay">
+    <div class="missionCard center"><small>SIGNAL LOST</small><h1>REDEPLOY?</h1>
+      <div class="result"><span>SCORE</span><b id="endScore">0</b></div>
+      <button id="retry" class="primary">REDEPLOY</button>
+    </div>
+  </section>
+  <section id="win" class="screen hidden overlay">
+    <div class="missionCard center"><small>MISSION COMPLETE</small><h1>THE COAST HOLDS.</h1>
+      <div class="result"><span>SCORE</span><b id="winScore">0</b></div>
+      <button id="again" class="primary">PLAY AGAIN</button>
+    </div>
+  </section>
+</main>
+<script src="./game.js"></script>
+<script>
+if('serviceWorker' in navigator) addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));
+</script>
+</body>
+</html>
