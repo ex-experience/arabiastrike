@@ -1,5 +1,7 @@
 {
   "gameId": "ARABIA_STRIKE",
   "repository": "ex-experience/arabiastrike",
-  "build": "production-mvp-v1"
+  "build": "MAX_TECH_V2",
+  "nativeResolution": "304x224",
+  "fixedHz": 59.18
 }

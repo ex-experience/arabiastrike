@@ -1,0 +1,9 @@
+{
+  "name": "ex-playable-worlds-max-tech-v2",
+  "private": true,
+  "scripts": {
+    "qa:arabia": "node ./arabiastrike/qa/smoke.mjs",
+    "qa:aljazira": "node ./aljazira/qa/smoke.mjs",
+    "qa": "npm run qa:arabia && npm run qa:aljazira"
+  }
+}
