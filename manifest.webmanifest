@@ -1,10 +1,10 @@
 {
-  "name": "EX ARABIA STRIKE",
-  "short_name": "ARABIA STRIKE",
+  "name": "EX™ SIGNAL RUN",
+  "short_name": "SIGNAL RUN",
   "start_url": "./",
-  "scope": "./",
   "display": "fullscreen",
-  "orientation": "landscape",
-  "background_color": "#061015",
-  "theme_color": "#49bfff"
+  "background_color": "#050909",
+  "theme_color": "#050909",
+  "description": "CHASE • DRIVE • ESCAPE — EX™ playable browser game",
+  "icons": []
 }
